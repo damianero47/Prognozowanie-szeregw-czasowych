@@ -16,6 +16,8 @@ Celem ćwiczenia była ewaluacja modelu GRU w prognozowaniu jedno- i wielokrokow
 
 Wykorzystano biblioteki PyTorch, NumPy i Matplotlib do analizy syntetycznego szeregu czasowego (1000 dni) charakteryzującego się trendem, sezonowością i szumem. Modelem predykcyjnym była jednowarstwowa sieć GRU (32 jednostki ukryte). Trening przeprowadzono dla okna 28 dni z parametrami: lr=1e-2, batch=64, max 40 epok. Zastosowano chronologiczny podział danych (70/15/15), standaryzację wyliczaną wyłącznie ze zbioru treningowego w celu uniknięcia przecieku danych oraz wczesne zatrzymywanie (early stopping). Zbadano również wpływ długości okna (3, 7 i 28 dni) na dwóch ziarnach losowości.
 
+## LINK DO GITHUBA https://github.com/damianero47/Prognozowanie-szeregw-czasowych/tree/main
+
 ## 3. Wyniki
 
 Model bazowy (3393 parametry) osiągnął minimum błędu walidacyjnego (MSE 0.0822) w 36. epoce, po czym strata zaczęła wykazywać wahania. Wczesne zatrzymanie zapobiegło przeuczeniu, co obrazuje plik "<img width="726" height="316" alt="wykres_krzywe" src="https://github.com/user-attachments/assets/2ba06071-7fce-4522-a998-45ffaa4e70da" />
